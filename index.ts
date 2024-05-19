@@ -2,6 +2,7 @@
 
 // Create an array named fruits that contains the following string  elements: "apple", "banana", "mango", "orange".
 let fruits:string[]=["apple","banana", "mango","orange"];
+
 // Question 2
 
 // Declare an array named numbers that can contain only number  elements and initialize it with the values 10, 20, 30, and 40.
@@ -42,4 +43,23 @@ console.log(fruits);
 let fruits1:string[]=["apple","banana", "mango","orange"];
 fruits1.unshift("kiwi");
 console.log(fruits1);
+// Question 9
+// Remove 2 elements from the fruits array starting from index 1 using the method.
+fruit.splice(1,2);
+console.log(fruits);
+// Question 10
+// Insert the elements "pineapple" and "pear" at index 2 of the fruits array using the method.
+fruits.splice(2,0,"pineapple","pear");
+console.log(fruits);
+// Question 11
+// Create a new array named citrusFruits that contains the first two elements of the fruits array using the method.
+let citrusFruits=fruit.slice(0,2);
+console.log(citrusFruits);
+// Question 12
+
+// Create a new array named lastTwoFruits that contains the last  two elements of the fruits array using the method.
+
+let lastTwoFruits=fruits.slice(-2);
+console.log(lastTwoFruits);
+
 

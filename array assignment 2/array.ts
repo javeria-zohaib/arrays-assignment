@@ -51,4 +51,31 @@ let products:Product[]=[{
         }
     },
 ]
-function
+function changeColor(products:Product,newcolor:string){
+    products.inventory.coloroption.push(newcolor);
+    if(newcolor === "blue"){
+        products.price += products.price*0.15;
+    }
+    else if (newcolor === "red"){
+        products.price -= products.price*0.05;
+    }
+    else if  (newcolor === "purple"){
+        products.price += products.price*0.95;
+    }
+    else if (newcolor === "silver"){
+        products.price -= products.price*0.10;
+    }
+    else{console.log(` sorry ! this ${newcolor} is not available`)}
+} 
+function displayproductdetails (product:Product[]){
+    product.forEach(products => {
+        console.log(`Name:${products.name}`)
+        console.log(`Price: ${products.price}`)
+        console.log(`Stock: ${products.inventory.stock}`)
+        console.log(`Available color :${products.inventory.coloroption}`)
+    })
+}
+changeColor(products[0],"blue")
+changeColor(products[1],"red")
+changeColor(products[2],"purple")
+displayproductdetails(products)

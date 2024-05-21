@@ -70,3 +70,34 @@ changeColor(products[0], "blue");
 changeColor(products[1], "red");
 changeColor(products[2], "purple");
 displayproductdetails(products);
+var employee = [{
+        name: "sara",
+        hoursWorked: 22,
+        hourlyRate: 30,
+        salary: 0,
+    },
+    {
+        name: "ali",
+        hoursWorked: 23,
+        hourlyRate: 60,
+        salary: 0,
+    },
+    {
+        name: "akram",
+        hoursWorked: 18,
+        hourlyRate: 80,
+        salary: 0,
+    },
+];
+function calculatesalary(employee) {
+    employee.forEach(function (employee) {
+        employee.salary = employee.hoursWorked * employee.hourlyRate;
+        if (employee.hoursWorked >= 20) {
+            employee.salary *= 1.20;
+            console.log("bonusgiven");
+        }
+    });
+}
+calculatesalary(employee);
+console.log(employee);
+employee.forEach(function (employee) { return (console.log("Employee:".concat(employee.name, ",Salary:").concat(employee.salary))); });

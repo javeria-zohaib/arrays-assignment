@@ -101,3 +101,28 @@ function calculatesalary(employee) {
 calculatesalary(employee);
 console.log(employee);
 employee.forEach(function (employee) { return (console.log("Employee:".concat(employee.name, ",Salary:").concat(employee.salary))); });
+var students = [{
+        name: "sara",
+        grades: [86, 78, 84],
+    },
+    {
+        name: "Ali",
+        grades: [65, 78, 67],
+    },
+    {
+        name: "Areeba",
+        grades: [99, 86, 91],
+    }
+];
+function calculateaveragegrade(grades) {
+    var total = 0;
+    for (var _i = 0, grades_1 = grades; _i < grades_1.length; _i++) {
+        var grade = grades_1[_i];
+        total += grade;
+    }
+    return total / grades.length;
+}
+students.forEach(function (student) {
+    var averagegrade = calculateaveragegrade(student.grades);
+    console.log("".concat(student.name, ": Average grade =").concat(averagegrade));
+});

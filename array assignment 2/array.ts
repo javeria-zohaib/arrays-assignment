@@ -135,3 +135,47 @@ function calculatesalary(employee:Employee[]){
  calculatesalary(employee);
  console.log(employee)
  employee.forEach(employee =>(console.log(`Employee:${employee.name},Salary:${employee.salary}`)));
+
+//  Challenge:
+/*You are tasked with creating a student grading system. Implement functions and logic to
+manage student grades effectively.
+1. Define a TypeScript type alias named Student to represent a student with the
+following properties:
+• name (string): The name of the student.
+• grades (number[ ]): An array of grades for different subjects.
+2. Create an array named students containing at least three student objects. Each student
+object should include a name and an array of grades.
+3. Implement a function named calculateAverageGrade that takes a student's grades as
+input and returns the average grade for that student.
+4. Display each student's name and average grade. Iterate through the students array,
+calculate the average grade for each student using the calculateAverageGrade
+function, and print their name and average grade.*/
+type Student={
+    name:string,
+    grades:number[]
+}
+let students:Student[]=[{
+    name:"sara",
+    grades:[86,78,84],
+},
+{
+    name:"Ali",
+    grades:[65,78,67],
+},
+{
+    name:"Areeba",
+    grades:[99,86,91],
+}
+]
+function calculateaveragegrade (grades: number[]){
+    let total=0;
+    for(let grade of grades){
+        total += grade;
+
+
+    }
+    return total/grades.length;
+}students.forEach(student => {
+    const averagegrade=calculateaveragegrade(student.grades)
+    console.log(`${student.name}: Average grade =${averagegrade}`)
+})

@@ -124,5 +124,5 @@ function calculateaveragegrade(grades) {
 }
 students.forEach(function (student) {
     var averagegrade = calculateaveragegrade(student.grades);
-    console.log("".concat(student.name, ": Average grade =").concat(averagegrade));
+    console.log("".concat(student.name, ": Average grade =").concat(averagegrade.toFixed(2)));
 });

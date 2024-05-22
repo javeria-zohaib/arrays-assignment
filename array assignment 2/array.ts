@@ -177,5 +177,5 @@ function calculateaveragegrade (grades: number[]){
     return total/grades.length;
 }students.forEach(student => {
     const averagegrade=calculateaveragegrade(student.grades)
-    console.log(`${student.name}: Average grade =${averagegrade}`)
+    console.log(`${student.name}: Average grade =${averagegrade.toFixed(2)}`)
 })
